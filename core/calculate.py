@@ -1,6 +1,7 @@
 import numpy as np
 
 
+# 校验行是否重复
 def check_row(x, i):
     for n in A[i - 1, 0:9]:
         if x == n:
@@ -8,6 +9,7 @@ def check_row(x, i):
     return True
 
 
+# 校验列是否重复
 def check_col(x, j):
     for n in A[0:9, j - 1]:
         if x == n:
@@ -15,6 +17,7 @@ def check_col(x, j):
     return True
 
 
+# 校验宫格是否符合
 def check_box(x, b):
     i2 = int((b / 3 if int(b / 3) == (b / 3) else int(b / 3) + 1) * 3)
     i1 = i2 - 3
